@@ -1,6 +1,6 @@
 name: scan_it
 description: Your QR code and barcode scanner for Flutter - speed and precision in one ultimate solution.
-version: 0.0.1
+version: 0.0.1-dev.1
 repository: https://github.com/luanemanuel/scan_it
 issue_tracker: https://github.com/luanemanuel/scan_it/issues
 
