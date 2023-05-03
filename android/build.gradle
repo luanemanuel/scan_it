@@ -1,17 +1,15 @@
-package android
-
 group 'br.com.luanemanuel.scan_it'
-version '1.0-SNAPSHOT'
+version '0.0.1-dev.1'
 
 buildscript {
-    ext.kotlin_version = '1.7.22'
+    ext.kotlin_version = '1.8.21'
     repositories {
         google()
         mavenCentral()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.2.0'
+        classpath 'com.android.tools.build:gradle:8.0.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
@@ -27,7 +25,8 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 31
+    namespace 'br.com.luanemanuel.scan_it'
+    compileSdkVersion 33
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -43,6 +42,14 @@ android {
     }
 
     defaultConfig {
-        minSdkVersion 16
+        minSdkVersion 21
     }
+}
+
+dependencies {
+    implementation 'com.google.mlkit:barcode-scanning:17.1.0'
+    // implementation 'com.google.android.gms:play-services-mlkit-barcode-scanning:18.1.0'
+
+    implementation 'androidx.camera:camera-camera2:1.2.1'
+    implementation 'androidx.camera:camera-lifecycle:1.2.1'
 }
